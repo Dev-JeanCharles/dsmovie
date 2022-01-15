@@ -1,9 +1,9 @@
 import axios from "axios";
 import MovieCard from "components/MovieCard";
-import Pagination from "components/Pagination"
 import { useEffect, useState } from "react";
 import { BASE_URL } from "utils/requests";
 import { MoviePage } from "types/movie";
+import Pagination from "components/Pagination";
 
 function Listing() {
 
@@ -31,11 +31,10 @@ function Listing() {
     }, [pageNumber]);
 
 
-
     return (
         <>
             <Pagination />
-
+            
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
@@ -50,4 +49,4 @@ function Listing() {
     );
 }
 
-export default Listing
+export default Listing;
